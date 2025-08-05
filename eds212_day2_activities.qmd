@@ -37,7 +37,7 @@ eval(pa_da)
 
 ```
 
-# Section 4: Make another penguin plot.
+# Section 4: Make another penguin plot. Bill Length vs Bill Depth 
 
 ```{r}
 library(ggplot2)
@@ -46,9 +46,23 @@ ggplot(data = penguins, aes(x =bill_len, y = bill_dep ))+
    scale_color_manual(values = c("darkorange", "purple", "cyan"))+ 
   labs(x = "Bill Length (cm)", 
        y = "Bill Depth (cm)", 
-       title = "Palmer Penguins size measurements", 
+       title = "Palmer Penguins Bill Size measurements", 
        subtitle = "Palmer Archipelago, Antarctica (2007-2009)", 
        caption = "Collected by Dr. Kristen Gorman") + 
-  facet_wrap(~island) + 
+  theme_minimal()
+```
+
+# Jitter Plot of Flipper Length
+
+```{r}
+library(ggplot2)
+ggplot(data = penguins, aes(x =species, y = flipper_len ))+ 
+  geom_jitter(aes(color = species)) + 
+   scale_color_manual(values = c("darkorange", "purple", "cyan"))+ 
+  labs(x = "Species", 
+       y = "Flipper Length (cm)", 
+       title = "Palmer Penguins Flipper Length by Species ", 
+       subtitle = "Palmer Archipelago, Antarctica (2007-2009)", 
+       caption = "Collected by Dr. Kristen Gorman") + 
   theme_minimal()
 ```
