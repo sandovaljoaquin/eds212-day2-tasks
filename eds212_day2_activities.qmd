@@ -1,0 +1,15 @@
+---
+title: "eds212-day2-tasks"
+format: html
+editor: visual
+---
+
+# Derivatives in R 
+
+## Create a new version-controlled R Project 
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+```
