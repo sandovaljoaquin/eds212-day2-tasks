@@ -40,5 +40,15 @@ eval(pa_da)
 # Section 4: Make another penguin plot.
 
 ```{r}
-
+library(ggplot2)
+ggplot(data = penguins, aes(x =bill_len, y = bill_dep ))+ 
+  geom_point(aes(color = species)) + 
+   scale_color_manual(values = c("darkorange", "purple", "cyan"))+ 
+  labs(x = "Bill Length (cm)", 
+       y = "Bill Depth (cm)", 
+       title = "Palmer Penguins size measurements", 
+       subtitle = "Palmer Archipelago, Antarctica (2007-2009)", 
+       caption = "Collected by Dr. Kristen Gorman") + 
+  facet_wrap(~island) + 
+  theme_minimal()
 ```
