@@ -37,7 +37,7 @@ eval(pa_da)
 
 ```
 
-# Section 4: Make another penguin plot 
+# Section 4: Make another penguin plot.
 
 ```{r}
 
