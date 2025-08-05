@@ -4,12 +4,19 @@ format: html
 editor: visual
 ---
 
-# Derivatives in R 
+# Derivatives in R
 
-## Create a new version-controlled R Project 
+## Create a new version-controlled R Project
 
 ```{r}
 library(tidyverse)
 library(palmerpenguins)
+usethis::use_git()
+usethis::use_github()
+```
+
+# Find Derivatives using R 
+
+```{r}
 
 ```
