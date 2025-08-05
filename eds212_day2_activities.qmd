@@ -19,4 +19,26 @@ usethis::use_github()
 
 ```{r}
 
+fx <- expression(x^2)
+fx_dx <- D(expr = expression(x^2), name = "x")
+fx_dx
+ 
+x <- 3 
+
+eval(fx_dx)
+
+pa <- expression(2(3*a+2)^4 - 5)
+pa_da <- D(expr = expression(2*(3*a+2)^4 - 5), name = "a")
+pa_da
+ 
+a <- 1.2
+
+eval(pa_da)
+
+```
+
+# Section 4: Make another penguin plot 
+
+```{r}
+
 ```
